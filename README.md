@@ -35,6 +35,14 @@ Figure -02 HALF Subtractor
 
 **Truthtable**
 
+HALF ADDER
+
+![halfadder TRUTHTABLE de exp3](https://github.com/user-attachments/assets/69196b10-8b55-4b95-89fd-53dc940973ab)
+
+HALF SUBTRACTOR
+
+![halfsubtractor TRUTHTABLE de exp3a](https://github.com/user-attachments/assets/2def24a0-0ddd-4b88-90dc-b76346215b31)
+
 **Procedure**
 
 1.	Type the program in Quartus software.
@@ -49,21 +57,50 @@ Figure -02 HALF Subtractor
 
 
 **Program:**
+```
+HALF ADDER
+module halfadder(a,b,sum,carry);
+input a,b;
+output sum,carry;
+assign sum= (a ^ b);
+assign carry= ( a & b);
+endmodule
 
-Program to design a half adder and full adder circuit and verify its truth table in quartus using Verilog programming.
 
-Developed by: Markandeyan Gokul Register Number: 212224240086
+HALF SUBTRACTOR
+module halfsubtractor(a,b,difference,borrow);
+input a,b;
+output difference,borrow;
+assign difference= (a ^ b);
+assign borrow= ( ~a & b);
+endmodule
+```
+
+Developed by: M. KISHORE
+RegisterNumber:24900763
 
 **RTL Schematic**
 
-![image](https://github.com/user-attachments/assets/8fd57926-597f-44ec-973b-e37f575b9e44)
+HALF ADDER
 
-![image](https://github.com/user-attachments/assets/c7aa046e-e786-4f56-8b07-5131b1bfb3aa)
+![Screenshot 2024-12-03 134254](https://github.com/user-attachments/assets/8d49f6b2-aced-4ab2-a0df-261f2b00ca75)
+
+
+HALF SUBTRACTOR
+
+![Screenshot 2024-12-03 135007](https://github.com/user-attachments/assets/2ff5648a-f696-42be-9b1f-b99a70b0f656)
+
 
 **Output/TIMING Waveform**
+HALF ADDER
 
-![image](https://github.com/user-attachments/assets/46ff9a18-c723-4e97-9d31-d2683c8e5b0e)
+![Screenshot (26)](https://github.com/user-attachments/assets/37060533-2b02-4c3e-a563-e52558709fee)
 
-![image](https://github.com/user-attachments/assets/c26d0a9f-2eef-43a3-be26-ede7c3f33baf)
 
-**Result:** Half adder and half subractor and its truth table in quarts using verilog program is verified.
+HALF SUBTRACTOR
+
+![Screenshot (28)](https://github.com/user-attachments/assets/286bdb39-db04-4cdc-a0bd-83f2cb030ec3)
+
+
+**Result:**
+Thus the half adder and half subtractor circuit and its truth table are verified by Quartus software.
